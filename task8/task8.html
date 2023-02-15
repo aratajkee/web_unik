@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel = "stylesheet" href="task8.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function zoom(){
+            var myImg = document.getElementById("treeImg");
+            var currWidth = myImg.clientWidth;
+            var text = document.getElementById("text");
+
+            text.value += " call ";
+            myImg.style.width = (currWidth + 1) + "px";
+            myImg.style.height = (currWidth + 1) + "px";
+            if (currWidth < 1500){
+                zoom()
+            }else {
+                alert("Done!")
+            }
+
+        }
+    </script>
+
+    <img onclick="zoom()" id = "treeImg" class="img" src="tree.jpg" alt="deadinside_tree not loaded"/>
+    <h1>count func cals</h1>
+    <textarea id = "text" rows="100" cols="100"></textarea>
+</body>
+</html>
