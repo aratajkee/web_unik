@@ -15,6 +15,7 @@
             text.value += " call ";
             myImg.style.width = (currWidth + 1) + "px";
             myImg.style.height = (currWidth + 1) + "px";
+
             if (currWidth < 1500){
                 zoom()
             }else {
@@ -23,9 +24,18 @@
 
         }
     </script>
+    <script>
+        function zoomImg(){
+            var img = document.getElementById('treeImg')
 
-    <img onclick="zoom()" id = "treeImg" class="img" src="tree.jpg" alt="deadinside_tree not loaded"/>
-    <h1>count func cals</h1>
-    <textarea id = "text" rows="100" cols="100"></textarea>
+            img.addEventListener("click", () => {
+                img.classList.toggle("scale");
+            })
+
+        }
+    </script>
+    <img  id = "treeImg" class="img" src="tree.webp" alt="deadinside_tree not loaded" onclick="zoomImg()"/>
+
+
 </body>
 </html>

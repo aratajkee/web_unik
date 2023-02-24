@@ -4,5 +4,11 @@
     cursor: pointer;
     height: 100px;
     width: 110px;
+    transition: transform 3s;
+
+
+}
+.scale{
+    transform: scale(3);
 
 }

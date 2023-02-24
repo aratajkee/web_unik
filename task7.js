@@ -21,12 +21,21 @@ function checkIfLucky(ticketNumber) {
 }
 
 
-while (true){
+const button = document.querySelector('.button_exec');
+//const text = document.querySelector('.text_area')
+const text = document.getElementById("text_area");
+const ticket = document.getElementById("input").value;
+button.addEventListener('click',() =>{
+    let res = checkIfLucky(document.getElementById("input").value);
+    text.value = res;
+})
 
-    const prompt = require('prompt-sync')();
-    const ticket = prompt("Enter ticket number: ");
-
-    let res =  checkIfLucky(ticket)
-    console.log(res)
-
-}
+// while (true){
+//
+//     const prompt = require('prompt-sync')();
+//     const ticket = prompt("Enter ticket number: ");
+//
+//     let res =  checkIfLucky(ticket)
+//     console.log(res)
+//
+// }
